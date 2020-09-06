@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web Camera Processer Demo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <span>Web Camera Processer Demo</span>
+    <div class="info">
+      <button onclick="switchVideoMode(0);">正常</button>
+      <div style="width: 10px"></div>
+      <button onclick="switchVideoMode(1);">虚化</button>
+      <div style="width: 10px"></div>
+      <button onclick="switchVideoMode(2);">图片</button>
+      <div style="width: 10px"></div>
+      当前模式：
+      <span id="modetext">请选择模式</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <div class="title">
+        原始视频
+      </div>
+      <div class="contant">
+        <video id="oriVideo" width="640" height="360" muted></video>
+      </div>
+    </div>
+    <div class="item">
+      <div class="title">
+        处理后视频
+      </div>
+      <div class="contant">
+        <canvas id="main-canvas" width="640" height="360"></canvas>
+      </div>
+    </div>
+  </div>
+  <img id="maskImg" src="./img/mask.png" style="display: none;" />
+
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
